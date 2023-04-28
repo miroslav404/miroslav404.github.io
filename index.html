@@ -1,1 +1,22 @@
-instant app demo
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Web App</title>
+  <script>
+    function sendMigrationSuccessToAndroidApp(userId) {
+      // Encode userId as URI component
+      var encodedUserId = encodeURIComponent(userId);
+
+      // Change location to a custom URL scheme
+      window.location.href = "worldcoin://success?userId=" + 
+encodedUserId;
+    }
+  </script>
+</head>
+<body>
+  <h1>Welcome to My Web App</h1>
+  <button onclick="sendMigrationSuccessToAndroidApp('user123')">Send 
+Migration Success</button>
+</body>
+</html>
+
