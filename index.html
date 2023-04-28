@@ -3,19 +3,14 @@
 <head>
   <title>My Web App</title>
   <script>
-    function sendMigrationSuccessToAndroidApp(userId) {
-      // Encode userId as URI component
-      var encodedUserId = encodeURIComponent(userId);
-
-      // Change location to a custom URL scheme
-      window.location.href = "worldcoin://success?userId=" + 
-encodedUserId;
+    function openNativeAppOnSuccess() {
+      window.location.href = "https://worldcoin.org/migration/success";
     }
   </script>
 </head>
 <body>
   <h1>Welcome to My Web App</h1>
-  <button onclick="sendMigrationSuccessToAndroidApp('user123')">Send 
+  <button onclick="openNativeAppOnSuccess()">Send 
 Migration Success</button>
 </body>
 </html>
